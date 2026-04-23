@@ -1,0 +1,14 @@
+{
+  "name": "Zeek Lab",
+  "image": "zeek/zeek:latest",
+  "workspaceFolder": "/workspace",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace,type=bind"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": ["corelight.zeek"]
+    }
+  },
+  "postCreateCommand": "zeek -v"
+}
